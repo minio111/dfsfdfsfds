@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+    html {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      padding: 10px;
+      width: 290px;
+    }
+    .heart {
+      fill: red;
+      position: relative;
+      top: 5px;
+      width: 50px;
+      animation: pulse 1s ease infinite;
+      margin-right: 20px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+
+    .big-letter {
+      font-size: 75px;
+      margin-right: 20px;
+    }
+
+    .ilove {
+      display: flex;
+
+    }
+    #aktualnie {
+      font-size: 26px;
+      font-weight: bold;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+
+</head>
+<body>
+Ile zarabiasz aktualnie (brutto)?<br>
+<input><br>
+<button>Zatwierdź</button><br><br>
+
+Dodatki w tym miesiącu (brutto):<br>
+<input><br>
+<button>Dodaj</button><br><br>
+
+W tym miesiącu zarobisz: <span id="ile">0</span>zł brutto<br><br><br>
+<span id="aktualnie"></span><br><br>
+
+
+
+
+
+<div class="ilove">
+<div class="big-letter">I</div>
+
+<svg class="heart" viewBox="0 0 32 29.6">
+  <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+	c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+</svg>
+
+<div class="big-letter">You</div>
+</div>
+
+</body>
+<script src="calculations.js"></script>
+</html>
