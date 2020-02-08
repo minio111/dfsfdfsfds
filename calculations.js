@@ -17,6 +17,11 @@ document.getElementsByTagName("button")[1].addEventListener('click', function ()
 
   let dotychczasZarobione = (zarobkiRazem * daysCurret) / days;
   start = dotychczasZarobione;
+
+  chrome.storage.sync.set({zarobkiRazem: zarobkiRazem}, function() {
+  });
+
+
   chrome.storage.sync.set({start: start}, function() {
   });
   let seconds = (days-daysCurret) * 24 * 60 * 60 *60;
@@ -41,7 +46,7 @@ function startXD () {
     document.getElementById('aktualnie').innerText = start + 'zł';
   });
 
-  
+
   chrome.storage.sync.get(['zarobkiRazem'], function(result) {
     console.log('Value currently is ' + result.zarobkiRazem);
     if (result.zarobkiRazem !== undefined) {
